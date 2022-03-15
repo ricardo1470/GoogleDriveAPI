@@ -1,0 +1,43 @@
+{
+  "name": "googledriveapi",
+  "version": "1.0.0",
+  "description": "use google drive API for create google sheets documents and manipulate this documents",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --watchAll --verbose=true --collectCoverage=true",
+    "dev": "nodemon src/app.js",
+    "start": "node src/app.js"
+  },
+  "keywords": [
+    "Node",
+    "Express",
+    "ejs",
+    "morgan",
+    "cors",
+    "GoogleAPI",
+    "GoogleDrive"
+  ],
+  "author": "Ricardo Alfonso Camayo Erazo",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "env": "^0.0.2",
+    "express": "^4.17.3",
+    "google-auth-library": "^7.14.0",
+    "google-sheets": "^0.0.7",
+    "google-spreadsheet": "^3.2.0",
+    "googleapis": "^95.0.0",
+    "http-errors": "^2.0.0",
+    "morgan": "^1.10.0",
+    "serve-favicon": "^2.5.0",
+    "sheets": "^0.6.0",
+    "socket.io": "^4.4.1"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
+  }
+}
