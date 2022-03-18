@@ -54,7 +54,7 @@ const getData = async (req, res) => {
             pageSize: 20,
             fields: 'nextPageToken, files(id, name)'
         })
-        res.render('index.html', { message : response.data});
+        res.render('data.html', { data : response.data});
         //res.json(response.data);
         console.log(response.data);
     } catch(err) {

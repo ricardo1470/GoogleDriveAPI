@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body style="background-color: black; color: white;">
+    <h3><%= message %></h3>
+
+    <% if (data.length > 0) { %>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+            </tr>
+            <% data.forEach(function(item) { %>
+                <tr>
+                    <td><%= item.id %></td>
+                    <td><%= item.name %></td>
+                    <td><a href="<%= item.downloadLink %>">Download</a></td>
+                </tr>
+            <% }); %>
+        </table>
+</body>
+</html>

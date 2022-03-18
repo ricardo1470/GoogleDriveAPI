@@ -13,6 +13,7 @@ const port = process.env.PORT || 9000;
 
 //import routes
 const routes = require('./routes/index');
+const { render } = require('ejs');
 //const routeApi = require('./routes/googleAPI');
 
 // settings
@@ -38,6 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
+    res.render('../views/error.html', { title: 'Google Drive API', message: 'esta sera la pagina de error' });
     next(createError(404));
 });
 

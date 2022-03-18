@@ -1,7 +1,11 @@
-este es un texto para probar la api al cliente
+const spreadsheetId = '1wiSszIRLh_R4DRlU6blnzY1r4-M4u1R0C0r_c2Msywo';
 
+    const getRows = await sheets.spreadsheets.values.get({
+        auth: oauth2Client,
+        spreadsheetId,
+        range: 'Hoja 1!A2:F',
+    });
 
-/write data into the google sheets
     await googleSheetsInstance.spreadsheets.values.append({
         auth, //auth object
         spreadsheetId, //spreadsheet id

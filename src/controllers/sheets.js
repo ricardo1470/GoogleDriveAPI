@@ -24,7 +24,7 @@ const createSheet = (req, res) => {
     sheets.spreadsheets.create({
         resource: {
             properties: {
-                title: 'My Firts Google Sheets'
+                title: 'My test Google Sheets'
             }
         }
     }, (err, response) => {
@@ -32,10 +32,18 @@ const createSheet = (req, res) => {
             console.error(err);
             return;
         }
-        console.log(response);
+        //res.json(`Created sheet: ${response.data.spreadsheetId}`);
+        console.log(`Created sheet: ${response.data.spreadsheetId}`);
+        return sheetId = response.data.spreadsheetId;
     })
-    res.send('Sheet created');
-    console.log('Sheet created');
+    //res.json(`Created sheet: ${response.data.spreadsheetId}`);
+}
+
+const getSheets = (req, res) => {}
+
+// crea una hoja de plantilla
+const createTemplate = async (req, res) => {
+
 }
 
 const writeSheet = async (req, res) => {
